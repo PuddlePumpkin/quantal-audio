@@ -1,4 +1,4 @@
-#include "QuantalAudio.hpp"
+#include "QuantalAudioExtendedMixer.hpp"
 #include "Daisy.hpp"
 
 struct DaisyMaster2 : Module {
@@ -75,6 +75,9 @@ struct DaisyMaster2 : Module {
                 leftExpander.module->model == modelDaisyChannel2
                 || leftExpander.module->model == modelDaisyChannelVu
                 || leftExpander.module->model == modelDaisyChannelSends2
+                || leftExpander.module->model == modelDaisyChannelSends3
+                || leftExpander.module->model == modelDaisyBlank1
+                || leftExpander.module->model == modelDaisyBlank2
             )) {
                 DaisyMessage *msgFromExpander = (DaisyMessage*)(leftExpander.consumerMessage);
 
@@ -135,23 +138,24 @@ struct DaisyMasterWidget2 : ModuleWidget {
     DaisyMasterWidget2(DaisyMaster2 *module) {
         setModule(module);
         setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/DaisyMaster2.svg")));
+        setPanel(createPanel(asset::plugin(pluginInstance, "res/DaisyMaster2.svg"), asset::plugin(pluginInstance, "res/DaisyMaster2-dark.svg")));
 
         // Screws
-        addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
-        addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
-        addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
-        addChild(createWidget<ScrewSilver>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+        addChild(createWidget<ThemedScrew>(Vec(RACK_GRID_WIDTH, 0)));
+        addChild(createWidget<ThemedScrew>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, 0)));
+        addChild(createWidget<ThemedScrew>(Vec(RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+        addChild(createWidget<ThemedScrew>(Vec(box.size.x - 2 * RACK_GRID_WIDTH, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
         // Level & CV
         addParam(createParam<RoundLargeBlackKnob>(Vec(RACK_GRID_WIDTH * 1.5 - (36.0 / 2), 52.0), module, DaisyMaster2::MIX_LVL_PARAM));
-        addInput(createInput<PJ301MPort>(Vec(RACK_GRID_WIDTH * 1.5 - (25.0 / 2), 96.0), module, DaisyMaster2::MIX_CV_INPUT));
+        addInput(createInput<ThemedPJ301MPort>(Vec(RACK_GRID_WIDTH * 1.5 - (25.0 / 2), 96.0), module, DaisyMaster2::MIX_CV_INPUT));
 
         // Mute
         addParam(createLightParam<VCVLightLatch<MediumSimpleLight<RedLight>>>(Vec(RACK_GRID_WIDTH * 1.5 - 9.0, 254.0), module, DaisyMaster2::MUTE_PARAM, DaisyMaster2::MUTE_LIGHT));
 
         // Mix output
-        addOutput(createOutput<PJ301MPort>(Vec((RACK_GRID_WIDTH * 1.5) - (25.0 / 2), 290.0), module, DaisyMaster2::MIX_OUTPUT_1));
-        addOutput(createOutput<PJ301MPort>(Vec((RACK_GRID_WIDTH * 1.5) - (25.0 / 2), 316.0), module, DaisyMaster2::MIX_OUTPUT_2));
+        addOutput(createOutput<ThemedPJ301MPort>(Vec((RACK_GRID_WIDTH * 1.5) - (25.0 / 2), 290.0), module, DaisyMaster2::MIX_OUTPUT_1));
+        addOutput(createOutput<ThemedPJ301MPort>(Vec((RACK_GRID_WIDTH * 1.5) - (25.0 / 2), 316.0), module, DaisyMaster2::MIX_OUTPUT_2));
 
         // Link light
         addChild(createLightCentered<TinyLight<YellowLight>>(Vec(RACK_GRID_WIDTH - 6, 361.0f), module, DaisyMaster2::LINK_LIGHT_L));

@@ -1,4 +1,4 @@
-#include "QuantalAudio.hpp"
+#include "QuantalAudioExtendedMixer.hpp"
 #include "Daisy.hpp"
 
 struct DaisyChannel2 : Module {
@@ -127,6 +127,9 @@ struct DaisyChannel2 : Module {
             leftExpander.module->model == modelDaisyChannel2
             || leftExpander.module->model == modelDaisyChannelVu
             || leftExpander.module->model == modelDaisyChannelSends2
+            || leftExpander.module->model == modelDaisyChannelSends3
+            || leftExpander.module->model == modelDaisyBlank1
+            || leftExpander.module->model == modelDaisyBlank2
         )) {
             DaisyMessage *msgFromModule = (DaisyMessage *)(leftExpander.consumerMessage);
             chainChannels = msgFromModule->channels;
@@ -147,6 +150,9 @@ struct DaisyChannel2 : Module {
             || rightExpander.module->model == modelDaisyChannel2
             || rightExpander.module->model == modelDaisyChannelVu
             || rightExpander.module->model == modelDaisyChannelSends2
+            || rightExpander.module->model == modelDaisyChannelSends3
+            || rightExpander.module->model == modelDaisyBlank1
+            || rightExpander.module->model == modelDaisyBlank2
         )) {
             DaisyMessage *msgToModule = (DaisyMessage *)(rightExpander.module->leftExpander.producerMessage);
 
@@ -189,20 +195,20 @@ struct DaisyChannel2 : Module {
 struct DaisyChannelWidget2 : ModuleWidget {
     DaisyChannelWidget2(DaisyChannel2 *module) {
         setModule(module);
-        setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/DaisyChannel2.svg")));
-
+        //setPanel(APP->window->loadSvg(asset::plugin(pluginInstance, "res/DaisyChannel2.svg")));
+        setPanel(createPanel(asset::plugin(pluginInstance, "res/DaisyChannel2.svg"), asset::plugin(pluginInstance, "res/DaisyChannel2-dark.svg")));
         // Screws
-        addChild(createWidget<ScrewSilver>(Vec(RACK_GRID_WIDTH, 0)));
-        addChild(createWidget<ScrewSilver>(Vec(0, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
+        addChild(createWidget<ThemedScrew>(Vec(RACK_GRID_WIDTH, 0)));
+        addChild(createWidget<ThemedScrew>(Vec(0, RACK_GRID_HEIGHT - RACK_GRID_WIDTH)));
 
         // Channel Input/Output
-        addInput(createInput<PJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 45.0), module, DaisyChannel2::CH_INPUT_1));
-        addInput(createInput<PJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 71.0), module, DaisyChannel2::CH_INPUT_2));
-        addOutput(createOutput<PJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 290.0), module, DaisyChannel2::CH_OUTPUT_1));
-        addOutput(createOutput<PJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 316.0), module, DaisyChannel2::CH_OUTPUT_2));
+        addInput(createInput<ThemedPJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 45.0), module, DaisyChannel2::CH_INPUT_1));
+        addInput(createInput<ThemedPJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 71.0), module, DaisyChannel2::CH_INPUT_2));
+        addOutput(createOutput<ThemedPJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 290.0), module, DaisyChannel2::CH_OUTPUT_1));
+        addOutput(createOutput<ThemedPJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 316.0), module, DaisyChannel2::CH_OUTPUT_2));
 
         // Level & CV
-        addInput(createInput<PJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 110.0), module, DaisyChannel2::LVL_CV_INPUT));
+        addInput(createInput<ThemedPJ301MPort>(Vec(RACK_GRID_WIDTH - 12.5, 110.0), module, DaisyChannel2::LVL_CV_INPUT));
         addParam(createParam<LEDSliderGreen>(Vec(RACK_GRID_WIDTH - 10.5, 138.4), module, DaisyChannel2::CH_LVL_PARAM));
         addParam(createParamCentered<Trimpot>(Vec(RACK_GRID_WIDTH - 0, 240.0), module, DaisyChannel2::PAN_PARAM));
 

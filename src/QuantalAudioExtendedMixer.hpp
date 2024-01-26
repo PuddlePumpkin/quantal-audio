@@ -7,16 +7,10 @@ using namespace rack;
 extern Plugin *pluginInstance;
 
 // Forward-declare each Model, defined in each module source file
-extern Model *modelMasterMixer;
-extern Model *modelBufferedMult;
-extern Model *modelUnityMix;
-extern Model *modelDaisyChannel;
 extern Model *modelDaisyChannel2;
 extern Model *modelDaisyChannelSends2;
+extern Model *modelDaisyChannelSends3;
 extern Model *modelDaisyChannelVu;
-extern Model *modelDaisyMaster;
+extern Model *modelDaisyBlank1;
+extern Model *modelDaisyBlank2;
 extern Model *modelDaisyMaster2;
-extern Model *modelHorsehair;
-extern Model *modelBlank1;
-extern Model *modelBlank3;
-extern Model *modelBlank5;
