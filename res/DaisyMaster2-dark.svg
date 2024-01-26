@@ -11,7 +11,24 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs12" />
+     id="defs12">
+    <linearGradient
+       id="uuid-832804fd-2c2c-431f-9feb-c43b542c060e"
+       x1="22.5"
+       y1="-9.9999997e-06"
+       x2="22.5"
+       y2="380"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0"
+         stop-color="#2a2a2b"
+         id="stop1" />
+      <stop
+         offset="1"
+         stop-color="#171717"
+         id="stop2" />
+    </linearGradient>
+  </defs>
   <sodipodi:namedview
      id="namedview12"
      pagecolor="#ffffff"
@@ -21,9 +38,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.5128364"
-     inkscape:cx="47.262217"
-     inkscape:cy="163.59998"
+     inkscape:zoom="2.1394738"
+     inkscape:cx="14.255842"
+     inkscape:cy="177.38007"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1854"
@@ -38,7 +55,7 @@
      fill="#e6e6e6"
      d="M.3.3h44.4v379.4H0Z"
      id="path2"
-     style="fill:#2b2b2c;fill-opacity:1" />
+     style="fill:url(#uuid-832804fd-2c2c-431f-9feb-c43b542c060e);fill-opacity:1;font-variation-settings:normal;opacity:1;vector-effect:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" />
   <path
      fill="#c91847"
      d="M.3 16h44.4v16H0Z"
