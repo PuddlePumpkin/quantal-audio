@@ -35,14 +35,14 @@ struct DaisyChannelSends3 : Module {
     DaisyChannelSends3() {
         config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
 
-        configParam(CH_LVL_PARAM, 0.0f, 1.0f, 1.0f, "Channel level", " dB", -10, 20);
-        configParam(PAN_PARAM, -1.0f, 1.0f, 0.0f, "Panning", "%", 0.f, 100.f);
-        configSwitch(MUTE_PARAM, 0.f, 1.f, 0.f, "Mute", { "Not muted", "Muted" });
+        configParam(CH_LVL_PARAM, 0.0f, 1.0f, 1.0f, "Dry Level", " dB", -10, 20);
+        configParam(PAN_PARAM, -1.0f, 1.0f, 0.0f, "Dry Panning", "%", 0.f, 100.f);
+        configSwitch(MUTE_PARAM, 0.f, 1.f, 0.f, "Dry Mute", { "Not muted", "Muted" });
 
-        configInput(LVL_CV_INPUT, "Level CV");
+        configInput(LVL_CV_INPUT, "Dry Level CV");
 
-        configOutput(CH_OUTPUT_1, "Channel L");
-        configOutput(CH_OUTPUT_2, "Channel R");
+        configOutput(CH_OUTPUT_1, "Aux L");
+        configOutput(CH_OUTPUT_2, "Aux R");
 
         configLight(LINK_LIGHT_L, "Daisy chain link input");
         configLight(LINK_LIGHT_R, "Daisy chain link output");

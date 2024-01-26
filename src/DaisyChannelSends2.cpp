@@ -30,8 +30,8 @@ struct DaisyChannelSends2 : Module {
     DaisyChannelSends2() {
         config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
 
-        configOutput(CH_OUTPUT_1, "Channel L");
-        configOutput(CH_OUTPUT_2, "Channel R");
+        configOutput(CH_OUTPUT_1, "Aux L");
+        configOutput(CH_OUTPUT_2, "Aux R");
 
         configLight(LINK_LIGHT_L, "Daisy chain link input");
         configLight(LINK_LIGHT_R, "Daisy chain link output");
