@@ -21,9 +21,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2.1394737"
-     inkscape:cx="22.669127"
-     inkscape:cy="152.60762"
+     inkscape:zoom="1.5128364"
+     inkscape:cx="47.262217"
+     inkscape:cy="163.59998"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1854"
@@ -69,13 +69,27 @@
      style="fill:#1994b3"
      id="path9" />
   <g
-     aria-label="D-MX2"
-     style="font-weight:700;font-family:'Envy Code R';-inkscape-font-specification:'Envy Code R';letter-spacing:0;word-spacing:0;fill:#000000;stroke-width:1px;fill-opacity:1"
-     id="g10">
+     id="g2"
+     transform="matrix(0.91406079,0,0,0.91406079,1.203383,2.3918933)">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.6394;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-9-7"
+       width="14.732833"
+       height="12.39714"
+       x="15.549583"
+       y="17.441113"
+       ry="2.994478" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.01643;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="path4-0-9"
+       cx="22.916"
+       cy="23.639683"
+       r="3.1286011" />
     <path
-       d="M6 19.32h2.893q.543 0 1.062.178.519.17.928.488.409.311.653.757.25.445.25.989v3.857q0 .543-.25.989-.244.445-.653.763-.41.311-.928.488Q9.436 28 8.893 28H6Zm2.893 7.716q.36 0 .555-.092.196-.091.287-.268.092-.184.104-.452.018-.275.018-.635v-3.857q0-.36-.018-.629-.012-.275-.104-.452-.091-.183-.287-.274-.195-.092-.555-.092H7.93v6.75zM13.678 23.178H18.5v.965h-4.822zM23.285 22.214l-.964 2.41-.965-2.41V28h-1.922l-.006-8.655v-.024h1.446l1.447 3.375 1.446-3.375h1.447V28h-1.929zM29.035 21.732l.964-2.411h1.94l-1.952 4.34L31.94 28h-1.941l-.964-2.41L28.07 28h-1.928l1.916-4.34-1.916-4.34h1.928zM35.272 19.32q-.5 0-.94.153-.439.153-.769.415-.33.263-.518.617-.19.348-.19.745h1.941q0-.202.037-.373.037-.177.098-.305.067-.134.152-.207.092-.08.19-.08h.964q.097 0 .183.08.091.073.153.207.067.128.103.305.037.171.037.373v.775q0 .22-.122.415-.116.195-.311.384-.196.183-.452.366-.256.184-.537.367-.434.287-.867.592-.433.299-.781.592-.348.293-.568.567-.22.275-.22.52V28h5.787v-.964h-3.858v-.965q0-.268.14-.5.14-.238.367-.452.226-.22.512-.415.287-.201.58-.397.41-.268.818-.543.41-.28.726-.55.324-.268.525-.518.202-.256.202-.482v-.964q0-.397-.19-.745-.189-.354-.518-.617-.33-.262-.77-.415-.439-.152-.94-.152z"
-       style="font-size:12.5px;fill:#000000;fill-opacity:1"
-       id="path10" />
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.65576;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="M 24.865583,21.718756 23.318402,23.31029"
+       id="path5-3-1"
+       sodipodi:nodetypes="cc" />
   </g>
   <g
      aria-label="MASTERCV"

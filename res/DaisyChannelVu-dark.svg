@@ -21,9 +21,9 @@
      inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="12.102691"
-     inkscape:cx="-4.5031308"
-     inkscape:cy="41.767571"
+     inkscape:zoom="1.0697369"
+     inkscape:cx="63.09963"
+     inkscape:cy="130.4059"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="1854"
@@ -52,15 +52,6 @@
      d="M.5 32H14v314H.5Z"
      style="fill:#333"
      id="path5" />
-  <g
-     aria-label="VU"
-     style="font-weight:700;font-family:'Envy Code R';-inkscape-font-specification:'Envy Code R';letter-spacing:0;word-spacing:0;fill:#000000;stroke-width:1px;fill-opacity:1"
-     id="g6">
-    <path
-       d="m2.429 19.32.964 5.787.964-5.786h1.954L4.38 28H2.43L.5 19.32ZM7.214 19.32h1.929v6.27q0 .36.012.634.018.268.11.452.091.177.287.268.195.092.555.092.36 0 .555-.092.196-.091.287-.268.092-.184.104-.452.018-.275.018-.635v-6.268H13v6.268q0 .543-.25.989-.244.445-.653.763-.41.311-.928.488-.519.171-1.062.171t-1.062-.17q-.519-.178-.928-.49-.409-.317-.659-.762-.244-.446-.244-.989v-2.41z"
-       style="font-size:12.5px;fill:#000000;fill-opacity:1"
-       id="path6" />
-  </g>
   <g
      aria-label="DS"
      style="font-family:'Envy Code R';-inkscape-font-specification:'Envy Code R';letter-spacing:0;word-spacing:0;fill:#0e0e0e;stroke-width:1px;fill-opacity:1"
